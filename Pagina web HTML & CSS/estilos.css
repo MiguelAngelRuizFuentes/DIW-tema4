@@ -1,0 +1,149 @@
+body{
+    background-color:moccasin;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+}
+
+article{
+    margin-bottom: 15px;
+}
+
+h1{
+    float: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    margin-bottom: 5px;
+}
+
+#logo{
+    float: right;
+}
+
+header{
+    margin-top: 30px;
+    background-color:gray;
+    border: 2px;
+    height: 100px;
+}
+
+nav{
+    margin-top: 5px;
+    height: 40px;
+    background-color: lemonchiffon;
+}
+
+nav>button{
+    float: right;
+    margin: 8px;
+    margin-right: 15px;
+}
+
+#buscador{
+    position: relative;
+    top: 9px;
+}
+
+section>p{
+    width: 75%;
+    float: right;
+    
+}
+
+.tacones>img{
+    margin: 50px;
+}
+
+.productos{
+    background-color: rgb(178, 211, 224);
+}
+
+.textop{
+    background-color: rgb(178, 211, 224);
+}
+
+.productos>p{
+    width: 200px;
+}
+
+
+#texto1{
+    float: left;
+    width: 25%;
+    height: 100px;
+    margin-right: 140px;
+}
+
+#texto2{
+    float: left;
+    width: 25%;
+    height: 100px;
+}
+
+#texto3{
+    float: right;
+    width: 25%;
+    height: 100px;
+}
+
+.piel>h2{
+    width: 100%;
+    float: left;
+}
+
+.textopiel{
+    width: 45%;
+    height: 100px;
+}
+
+.piel>img{
+    float: right;
+    margin-bottom: 35px;
+    position: relative;
+    bottom: 30px;
+    margin-right: 15px;
+}
+
+.tiendas{
+    margin-top: 300px;
+
+}
+
+.tituloti{
+    width: 50%;
+    float: left;
+
+}
+
+.textotiendas{
+    width: 50%;
+    float: right;
+    position: relative;
+    top: 50px;
+
+}
+
+footer{
+    margin-top: 300px;
+    width: 100%;
+}
+
+.copyrighht{
+    position: relative;
+    top: 350px;
+    right: 600px;
+}
+
+.enlaces{
+    float: left;
+    margin-top: 300px;
+
+
+}
+
+.redessociales{
+    float: right;
+    margin-top: 300px;
+}

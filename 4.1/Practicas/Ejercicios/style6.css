@@ -1,0 +1,22 @@
+table,td,th {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-spacing: 0;
+}
+
+#grande{font-size:20px;}
+
+#grande:hover {font-size:40px;}
+
+p { color: #555; }
+
+a { color: chartreuse; }
+
+.segundo:hover { background-color: red; color:white; }
+
+.primero{
+    color: black;
+    font-family: cursive;
+}

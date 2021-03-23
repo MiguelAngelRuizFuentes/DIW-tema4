@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+   <title>La pseudoclase de vínculo</title>  
+   <meta charset="UTF-8" />  
+   <link href="#" rel="stylesheet" />  
+   <style>  
+      section:target h3 {  
+         color: green;  
+      }  
+      section:target h3::before {  
+         content: "\203A\00a0" ;  
+      }  
+   </style>  
+</head>  
+<body>  
+<nav>  
+   <p><a href="#punto1">Punto 1</a> | <a 
+href="#punto2">Punto 2</a></p>  
+</nav>  
+<section id="punto1">  
+   <h3>Punto 1</h3>  
+   <p>Texto del punto 1...</p>  
+</section>  
+<section id="punto2">  
+   <h3>Punto 2</h3>  
+   <p>Texto del punto 2...</p>  
+</section>  
+</body>  
+</html>

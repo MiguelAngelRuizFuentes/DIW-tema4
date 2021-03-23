@@ -1,0 +1,173 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+   <title>Menú CSS3</title>  
+   <meta charset="UTF-8" />  
+   <style>  
+
+	body{
+		background:#3CF;
+	}
+	
+	/*A la etiqueta NAV le damos borde redondeado con un radio de 10px , 
+	  degradado de blanco a gris, padding de 10px y un ancho de 950px.
+	*/
+	nav{
+		/*Bordes redondeados*/
+		-webkit-border-radius:10px;/*Para chrome y Safari*/
+		-moz-border-radius:10px;/*Para Firefox*/
+		-o-border-radius:10px;/*Para Opera*/
+		border-radius:10px;/*El estandar por defecto*/
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));/*Para chrome y Safari*/
+		/*Degradados*/
+		background-image: -moz-linear-gradient(top center, #FFF, #CCC);/*Para Firefox*/
+		background-image: -o-linear-gradient(top, #FFF, #CCC);/*Para Opera*/
+		background-image: linear-gradient(top, #FFF, #CCC);/*El estandar por defecto*/
+		overflow:hidden;
+		padding:10px;
+		width:950px;
+        margin:0 auto;
+        text-align: center;
+	}
+       
+
+	/*Recordemos que NAV es un  contenedor para la lista, así que ahora pasamos a dar estilo a
+      la etiqueta de  UL que contiene las listas, vamos a anular el estilo de lista, darle márgenes 
+	  laterales de 10px y anular el padding.
+	*/
+	nav ul{
+		list-style:none;
+		margin:0 10px 0 10px;
+		padding:0;
+	}
+
+	/* Hacemos que los elementos de la lista LI floten a la izquierda para una vista horizontal 
+	   y le damos un margen derecho de 10px para darle separación con bordes redondeados de 5px de radio, 
+	   tipo de fuente, tamaño de 16px, centrado y sombras para el texto.
+	*/
+	nav ul li{
+		/*Bordes redondeados*/
+		-webkit-border-radius:5px;/*Chrome y Safari*/
+		-moz-border-radius:5px;/*Firefox*/
+		-o-border-radius:5px;/*Opera*/
+		border-radius:5px;/*Estandar por defecto*/
+		float:left;
+        font-family:Arial, Helvetica, sans-serif;
+		font-size:16px;
+		font-weight:bold;
+		margin-right:10px;
+		text-align:center;
+		/*Sombras para texto, los mismos parametros que box-shadow*/
+		text-shadow: 0px 1px 0px #FFF;
+        width: 170px;
+	}
+	
+	
+	/*Al pasar el puntero sobre el elemento LI se activara el evento HOVER cambiando el fondo de este. 
+	  En los degradados tenemos diferentes maneras de aplicarlo para cada navegador, en este caso para 
+	  el estándar por defecto, Opera y Firefox es igual, para Chrome y Safari es diferente pero con las 
+	  mismas propiedades. De tipo linear, empezamos por la parte alta hacia debajo de blanco a gris claro, 
+	  con la sombra tenemos los parámetros eje X, eje Y, enfoque y color.
+	*/
+	nav ul li:hover{
+		/*Degradado de fondo*/
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to( #E3E3E3));/*Chrome y Safari*/
+		background-image: -moz-linear-gradient(top center, #FFF, #E3E3E3);/*Firefox*/
+		background-image: -o-linear-gradient(top, #FFF, #E3E3E3);/*Opera*/
+		background-image: linear-gradient(top, #FFF, #E3E3E3);/*Estandar por defecto*/
+		/*Sombras*/
+		-webkit-box-shadow:  1px -1px 0px #999;/*Chrome y Safari*/
+		-moz-box-shadow:  1px -1px 0px #999;/*Firefox*/
+		-o-box-shadow:  1px -5px 0px #999;/*Opera*/
+		box-shadow:  5px -5px 0px #999;/*Estandar por defecto*/
+		border:1px solid #E3E3E3;
+	}
+
+	/*Cada elemento LI es también un contenedor, en este caso de enlaces, 
+	  a estos enlaces le daremos color gris y que sean bloques con padding de 10px, 
+	  quitaremos la decoración de los enlaces. 
+	*/
+	nav ul li a{
+		color:#999;
+		display:block;
+		padding:10px;
+		text-decoration:none;
+		
+	}
+
+	/*La transición esta vez se activara al pasar el puntero, el evento HOVER de CSS que cambiara de color gris el texto a negro, esto es sobre la etiqueta A de enlace.
+      Las transiciones en CSS3 tienen diferentes parámetros, 
+	  esta vez utilizamos el tiempo de 0.4 segundos, el efecto linear y 
+	  aplicable a todas las propiedades básicas, ancho , color, margen, etc.
+	*/
+	nav ul li a:hover {
+		color:#000;
+        /*Transiciones*/
+		-webkit-transition: 0.4s linear all;
+		-moz-transition: 0.4s linear all;
+		-o-transition: 0.4s linear all;
+		transition: 0.4s linear all;
+	}
+	
+	/*
+	Ejemplo de la pseudoclase target
+	*/
+	section:target h1{
+		color:red;
+		text-shadow: 0px 1px 0px #FFF;
+	}
+	</style>  
+</head>  
+<body> 
+<nav>
+<ul>
+    <li><a title="Opcion 1" href="#opcion1">Capítulo 1</a></li>
+    <li><a title="Opcion 2" href="#opcion2">Capítulo 2</a></li>
+    <li><a title="Opcion 3" href="#opcion3">Capítulo 3</a></li>
+    <li><a title="Opcion 4" href="#opcion4">Capítulo 4</a></li>
+    <li><a title="Opcion 5" href="#opcion5">Capítulo 5</a></li>
+</ul>
+</nav> 
+<section id="opcion1">
+<h1>Capitulo 1</h1>
+<p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+Fusce dapibus, tellus ac cursus commodo, <strong>tortor</strong> mauris condimentum nibh, 
+ut fermentum massa justo sit amet risus. Cum sociis natoque <strong>penatibus</strong> y 
+magnis dis parturient montes.</p><p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+</p>
+</section>
+<section id="opcion2">
+<h1>Capitulo 2</h1>
+<p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+Fusce dapibus, tellus ac cursus commodo, <strong>tortor</strong> mauris condimentum nibh, 
+ut fermentum massa justo sit amet risus. Cum sociis natoque <strong>penatibus</strong> y 
+magnis dis parturient montes.</p><p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+</p>
+</section>
+<section id="opcion3">
+<h1>Capitulo 3</h1>
+<p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+Fusce dapibus, tellus ac cursus commodo, <strong>tortor</strong> mauris condimentum nibh, 
+ut fermentum massa justo sit amet risus. Cum sociis natoque <strong>penatibus</strong> y 
+magnis dis parturient montes.</p><p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+</p>
+</section>
+<section id="opcion4">
+<h1>Capitulo 4</h1>
+<p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+Fusce dapibus, tellus ac cursus commodo, <strong>tortor</strong> mauris condimentum nibh, 
+ut fermentum massa justo sit amet risus. Cum sociis natoque <strong>penatibus</strong> y 
+magnis dis parturient montes.</p><p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+</p>
+</section>
+<section id="opcion5">
+<h1>Capitulo 5</h1>
+<p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+Fusce dapibus, tellus ac cursus commodo, <strong>tortor</strong> mauris condimentum nibh, 
+ut fermentum massa justo sit amet risus. Cum sociis natoque <strong>penatibus</strong> y 
+magnis dis parturient montes.</p><p>Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>. 
+</p>
+</section>
+
+</body>  
+</html>

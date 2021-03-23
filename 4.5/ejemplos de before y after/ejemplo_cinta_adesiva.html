@@ -1,0 +1,56 @@
+<doctype html>
+<html>
+<head>
+<title>Uso de before y after</title>
+<style type="text/css">
+/**FIRST CREATE THE BOX**/
+#sticky{
+position: relative; /*for more info on positioning see the Support section below*/
+width: 300px;
+background: #832436;
+/*give the box a drop shadow*/
+-webkit-box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .75);
+-moz-box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .75);
+box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .75);
+}
+/**NOW WE CREATE THE TAPE**/
+/*First the basic styling of both strips*/
+#tape::before, #tape::after{
+content: 'a'; /*because there is nothing between the ' ' the content of the pseudo elements will be blank*/
+display: block;
+position: absolute; /*for more info on positioning see the Support section below*/
+background-color: rgba(220,212,176,0.85); /*using rgba for the colour lets us give the tape some opacity*/
+height: 25px;
+}
+/*Now position the left strip of tape*/
+#tape::before{
+left:-5px; /*distance from the left edge of the box*/
+top: -15px; /*distance from the top of the box*/
+width: 45px; /*length of the strip of tape*/
+/*rotate the tape, in this case 12° anti-clockwise*/
+-webkit-transform: rotate(-12deg);
+-moz-transform: rotate(-12deg);
+-o-transform: rotate(-12deg);
+-ms-transform: rotate(-12deg);
+}
+/*Finally position the right strip*/
+#tape::after {
+left: 298px; /*distance from the left edge of the box*/
+top: -10px; /*distance from the top of the box*/
+width: 70px; /*length of the strip of tape*/
+/*rotate the tape, this time 20° clockwise*/
+-webkit-transform: rotate(20deg);
+-moz-transform: rotate(20deg);
+-o-transform: rotate(20deg);
+-ms-transform: rotate(20deg);
+}
+</style>
+</head>
+<body>
+<main>
+<div id="sticky"> <!--we'll use the id sticky to style the box and create the tape-->
+<p id="tape">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac lectus lectus, id suscipit massa. Sed vitae enim non augue molestie fermentum. Phasellus quis ligula est. Fusce congue, erat eget tristique venenatis, leo nibh porttitor orci, non laoreet nisi ante nec justo.</p>
+</div>
+</main>
+</body>
+</html>

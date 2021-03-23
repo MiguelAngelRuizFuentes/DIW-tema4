@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Los pseudoelementos de contenido</title>
+	<meta charset="UTF-8" />
+	<style>
+		li {
+			list-style: none;
+		}
+		li::before {
+			content: "\21d2";
+		}
+		li::after {
+			content: "\2014";
+		}
+	</style>
+</head>
+<body>
+<ul>
+	<li>Manzana</li>
+	<li>Pera</li>
+</ul>
+</body>
+</html>
